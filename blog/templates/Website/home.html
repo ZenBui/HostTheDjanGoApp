@@ -1,0 +1,192 @@
+{% load static %}
+<!DOCTYPE html>	
+<html>
+<head>
+	<title>Your Car</title>
+		<link rel="stylesheet" type="text/css" href="{% static 'home.css' %}"/>
+		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+	</head>
+<body>
+	<!----navbar--->
+	<section id ="nav-bar">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="logo" href="#"><img class="logo"src="{% static 'CAR2.png' %}"></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<i class="fas fa-bars"></i>
+  		</button>
+  	<div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto" >
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'home' %}">TRANG CHỦ</a>
+      </li>
+ 
+      <li class="nav-item">
+        <a class="nav-link" href="#">SẢN PHẨM</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="#">TƯ VẤN KHÁCH HÀNG</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="{% url 'tintuc' %}">TIN TỨC</a>
+      </li>
+    </ul>
+ 	 </div>
+	</nav>
+	<div class="img-2"></div>
+	</section>
+	<!------------Banner-------->
+	<section id="banner">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+				<p class="banner-font">VinFast Lux SA2.0</p>
+				<p class="banner-font1">Confidence <br />Of Vietnamese</p>
+				<button class="btn" type="button" name="" value="">
+					<a class="link-btn" href="https://www.facebook.com/">
+					<p>Xem chi tiết</p>
+					</a>
+				</button>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!----------San pham-------->
+	<section id="sanpham">
+		<h1 class="title">TẠI SAO CHỌN LUX SA2.0</h1>
+		<div class="container1">
+				<div class="san-pham">
+					<h1> LUX SA2.0 </h1>
+					<p >Lux A2.0 là một chiếc xe phức tạp cho một đối tượng tinh vi.Từ mui xe giống như máy bay, buồng lái cổ điển phía sau đến bánh xe và lốp lớn, cảm giác hài hòa và cân bằng là vô song. </p>
+				</div>
+			<div class="panel">
+				<img src="{% static 'LUX-A2.0.png' %}">
+			</div>
+				<div class="noi-dung">	
+					<h5>THIẾT KẾ</h3>
+					<p>Một chiếc xe được thiết kế và bình chọn đặc biệt bởi người dùng Việt Nam</p>
+					<h5>BÊN NGOÀI</h3>
+					<p>Một sự kết hợp của hình dạng cơ bắp và hình thức đẹp mang đến cho Lux A2.0 một cái nhìn rất hiện đại và vượt thời gian.</p>
+					<h5>TỰ HÀO VIỆT NAM</h3>
+					<p>Một thiết kế ấn tượng và đẳng cấp thế giới nhưng cũng đáng kinh ngạc, tiêu biểu cho phong cảnh và văn hóa Việt Nam.</p>
+				</div>
+		</div>
+		<div class="hop">
+		<div class="Video">
+		<video autoplay="autoplay" loop="" muted="" preload="metadata">
+			<source src="{% static 'video.mp4' %}" type="video/mp4">
+		</video> 
+		</div>
+		<div class="wrapper"> 
+			<div class="coppy">
+			<h1 class="about-us1" > VỀ CHÚNG TÔI</h1>
+			<p class="about-us2"> 
+					Chúng tôi sẽ đem đến cho khách hàng một trải nghiệm thật mới mẽ với các dịch vụ và nhân viên tự vấn nhiệt tình, hãy đăng ký ngay để nhận được nhiều ưu đãi và hấp dẫn.
+			</p>
+			</div>
+		</div>
+		</div>
+
+	</section>
+	<!--------------thông số kỹ thuật----------->
+	<section id="thong-so">
+		<h1 class="title2">THÔNG SỐ KỸ THUẬT LUX SA2.0</h1>
+		<div class="container4">
+			<div class ="xe">
+				<img src="{%static 'thong-so2.png' %}">
+			</div>	
+			<div class="tskt">
+				<h3>KÍCH THƯỚC & TRỌNG LƯỢNG</h3>
+				<hr>
+				<h5>Dài x Rộng x Cao (mm):  4.940 x 1.960 x 1.773</h5>
+				<h5>Trọng lượng (kg): 2.140</h5>
+			
+			</div>
+	</div>
+	</section>
+
+	<!----------Đăng ký------------>
+	<section id="dang-ky">
+		<div class="row">
+		<div class="login-box"> 
+		  <h2>ĐĂNG KÝ NHẬN ƯU ĐÃI HẤP DẪN TỪ HT</h2>
+		  <form action="" method="POST">
+            {{form.as_p}}
+			  {% csrf_token %}
+			  <div class="textbox">
+			 	<i class="fas fa-user"></i>
+			  	<input type="text" placeholder="Họ và tên" color="white" name="username" value="" >
+			  </div>
+
+			  <div class="textbox">
+				<i class="far fa-envelope"></i>
+				<input type="text" placeholder="Email" name="email" value="" required>
+			  </div>
+
+			  <div class="textbox">
+				<i class="fas fa-phone"></i>
+				<input type="text" placeholder="Số điện thoại" name="phoneNumber" value=""  required>
+			  </div>
+
+			  <input class="btn1" type="submit" name="" value="ĐĂNG KÝ">
+		  </form>
+		  
+
+		</div>
+    	</div>
+	</section>
+	<hr>
+	<!------------Nhận-xét------------->
+	<section id="nhan-xet">
+		<h1 class="title6">What Our Clients Say</h1>
+		<div class="container9">
+			<div class="nx12">
+				<img src="{% static 'nx2.jpg' %}">
+				<h5>Trần Đức Bo</h5>
+				<p>" Tôi rất hài lòng về sản phầm của dịch vụ. Mọi thứ đều hoàn hảo từ sản phẩm đến dịch vụ "</p>
+				<img src="{% static 'nx3.png' %}">
+				<h5>Trần Thanh Tâm</h5>
+				<p>" Tôi rất thích sản phẩm, nhân viên phục vụ tận tình "</p>
+			</div>
+			<div class="nx34">
+				<img src="{% static 'nx4.png' %}">
+				<h5>Nguyễn Quang Hải</h5>
+				<p>" Từ sản phẩm đến tất cả nhân viên đều tật tình, tôi sẽ tiếp tục mua nếu có cơ hội "</p>
+				<img src="{% static 'nx1.png' %}">
+				<h5>Trịnh Trần Phương Tuấn</h5>
+				<p>" Nhân viện hỗ trợ tận tình, từ cách tư vấn đến cách nhân viên làm việc đều rất tốt "</p>
+			</div>
+			</div>
+	</section>
+	<!--------------Footer------->
+	<footer id="footer-top">
+		<h2 class="title3">Liên hệ với chúng tôi</h2>
+
+			<div class="container10">
+					<div class="segment-one">
+						<a class="logo1" href="#"><img class="logo"src="{% static 'CAR2.png' %}"></a>
+						<h6>Luôn là sự lựa chọn của bạn.</h6>
+					</div>
+					<div class="segment-two">
+						<h5>HOTLINE</h5>
+						<h6><i class="fas fa-phone-alt"></i>Hỗ trợ 24/24: 059113</h6>
+						<h6><i class="far fa-envelope"></i>Email: HT.yourcar@gamil.com</h6>
+						<h6><i class="fas fa-globe-americas"></i>Website: HT.yourcar@gmail.com</h6>
+					</div>
+					<div class="segment-three">
+						<h5>FOLLOW US</h5>
+						<h6>Hãy theo dõi chúng tôi qua:</h6>
+						<a href="#"><i class="fab fa-facebook-square"></i></a>
+						<a href="#"><i class="fab fa-twitter-square"></i></a>
+						<a href="#"><i class="fab fa-youtube"></i></a>
+						<a href="#"><i class="fab fa-instagram-square"></i></a>
+					</div>
+			</div>
+								<hr>
+					<h6 class="title5"> HT &copy;</h6>
+	</footer>
+	
+</body>
+</html>

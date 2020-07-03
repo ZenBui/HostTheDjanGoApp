@@ -1,0 +1,145 @@
+{% load static %}
+<!DOCTYPE html> 
+<html>
+<head>
+  <title>Tin Tức</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'tin-tuc.css' %}"/>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>   
+  </head>
+<body>
+    <div id ="nav-bar">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="logo" href="#"><img class="logo"src="{% static 'CAR2.png' %}"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+      </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto" >
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'home' %}">TRANG CHỦ</a>
+      </li>
+ 
+      <li class="nav-item">
+        <a class="nav-link" href="#">SẢN PHẨM</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="#">TƯ VẤN KHÁCH HÀNG</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="{% url 'tintuc' %}">TIN TỨC</a>
+      </li>
+    </ul>
+   </div>
+  </nav>
+</div>
+   <!---------Main----------->
+  <div id="main">
+    <h4 class="title7">TỔNG HỢP TIN TỨC Ô TÔ MỚI NHẤT</h4> 
+      <div class="container1">
+         <div class="left">
+            <ul>
+              <li>
+                <img src="{% static 'tin-tuc1.jpg' %}" />
+                <a href="https://oto.com.vn/xe-moi/land-rover-discovery-sport-chinh-thuc-ra-mat-thi-truong-viet-nam-articleid-arm5xb2"><h5>Video: Phát hoảng khi gặp các nữ Ninja tham gia giao thông</h5></a>
+                <h6>Video ghi lại hình ảnh các nữ Ninja tham gia giao thông khiến người xem "phát hoảng" vì độ liều lĩnh, nguy hiểm khi không tuân thủ luật giao thông.</h6>
+                <p>26/06/2020</p>
+              </li>
+              <li>
+                <img src="{% static 'tin-tuc2.jpg' %}" />
+                <a href="https://oto.com.vn/thi-truong-o-to/uu-dai-chong-uu-dai-gia-xe-lap-rap-kho-giam-articleid-ge86pkq"><h5>Ưu đãi chồng ưu đãi, liệu giá xe lắp ráp có giảm mạnh?</h5></a>
+                 <h6>Xe lắp ráp trong nước đang được hưởng nhiều chính sách ưu đãi như: miễn thuế nhập linh kiện, giảm 50% phí trước bạ cho đến hết năm 2020... Vậy giá xe lắp ráp có giảm trong thời gian tới?</h6>
+                <p>26/06/2020</p>
+              </li>
+              <li>
+                <img src="{% static 'tin-tuc3.jpg' %}" />
+                <a href="https://oto.com.vn/xe-moi/mercedes-gla-2021-chao-gia-nhinh-hon-truoc-articleid-2ase3e5"><h5>Mercedes GLA 2021 chào giá xe nhỉnh hơn trước</h5></a>
+                 <h6>Mercedes GLA 2021 đã tăng giá một chút so với phiên bản đời trước vốn có giá khởi điểm 35.245 USD (817 triệu đồng).</h6>
+                <p>26/06/2020</p>
+              </li>
+              <li>
+                <img src="{% static 'tin-tuc4.jpg' %}" />
+                <a href="https://oto.com.vn/su-kien/nghe-review-xe-co-con-hap-dan-articleid-8zci7i8"><h5>Nghề "review xe" có còn hấp dẫn</h5></a>
+                 <h6>Reviewer hay còn gọi là người đánh giá sản phẩm, đang trở thành xu thế mà các bạn trẻ đều muốn được trải nghiệm. Thế nhưng, nghề này có thực sự hào nhoáng như vậy?</h6>
+                <p>26/06/2020</p>
+              </li>
+              <li>
+                <img src="{% static 'tin-tuc5.jpg' %}" />
+                <a href="https://oto.com.vn/xe-moi/lo-anh-thuc-te-kia-sedona-2021-cho-ngay-ve-viet-nam-articleid-a5a84c2"><h5>Lộ ảnh thực tế Kia Sedona 2021 đẹp "long lanh", chỉ chờ ngày về Việt Nam</h5></a>
+                 <h6>Kia Sedona 2021 là thế hệ hoàn toàn mới vừa ra mắt tại quê nhà Hàn Quốc và mẫu xe đa dụng cỡ lớn này đã lộ ảnh thực tế với diện mạo quyến rũ hơn hẳn.</h6>
+                <p>26/06/2020</p>
+              </li>
+              <li>
+                <img src="{% static 'tin-tuc6.jpg' %}" />
+                <a href="https://oto.com.vn/xe-moi/hyundai-santa-fe-2021-facelift-co-dang-cho-doi-articleid-kpcs2ev"><h5>Hyundai Santa Fe 2021 facelift mới có gì hấp dẫn, đáng xuống tiền?</h5></a>
+                 <h6>Mặc dù chỉ là bản facelift nhưng Hyundai Santa Fe 2021 có khá nhiều thay đổi đáng chú ý và chắc chắn là 1 lựa chọn cực kỳ hấp dẫn, đáng cân nhắc.</h6>
+                <p>26/06/2020</p>
+              </li>
+              <li>
+                <img src="{% static 'tin-tuc7.jpg' %}" />
+                <a href="https://oto.com.vn/su-kien/honda-viet-nam-to-chuc-thi-sat-hach-bang-lai-xe-o-to-articleid-23iecb6"><h5>Honda Việt Nam tổ chức thi sát hạch bằng lái xe ô tô</h5></a>
+                 <h6>Mới đây, trung tâm đào tạo lái xe an toàn của Honda Việt Nam (HVN) chính thức tổ chức kỳ thi sát hạch cấp Giấy phép lái xe (GPLX) ô tô lần đầu tiên, đánh dấu bước phát triển mới.</h6>
+                <p>26/06/2020</p>
+              </li>
+              <li>
+                <img src="{% static 'tin-tuc8.jpg' %}" />
+                <a href="#"><h5>Chiếc VinFast Fadil biển ngũ quý 7 đầu tiên ở Việt Nam</h5></a>
+                 <h6>Chủ nhân của một chiếc xe VinFast Fadil tại tỉnh Bình Dương đã may mắn bấm được biển số ngũ quý 7. Đây được cho là biển số đẹp nhất từng bấm được ở thời điểm hiện tại.</h6>
+                <p>26/06/2020</p>
+              </li>
+              <li>
+                <img src="{% static 'tin-tuc9.jpg' %}" />
+                <a href="https://oto.com.vn/thi-truong-o-to/vinfast-fadil-bam-duoc-bien-ngu-quy-7-dau-tien-viet-nam-articleid-5p1xgd4"><h5>Sau bộ 3 xe nhập khẩu, Toyota sắp tung ra loạt xe mới tranh giành thị phần tại Việt Nam</h5></a>
+                 <h6>Loạt xe Toyota mới sắp ra mắt tại thị trường Việt Nam, đáng chú ý là Toyota Fortuner nâng cấp vừa được giới thiệu ở Thái Lan.</h6>
+                <p>26/06/2020</p>
+              </li>
+              <li>
+                <img src="{% static 'tin-tuc10.jpg' %}" />
+                <a href="https://oto.com.vn/thi-truong-o-to/gia-xang-dau-hom-nay-articleid-0i2we3q"><h5>Giá xăng dầu hôm nay</h5></a>
+                 <h6>Giá xăng dầu thế giới hôm nay tăng nhẹ. Trong khi đó, giá xăng dầu trong nước cũng có đợt tăng mới sau khi được Bộ Công thương điều chỉnh vào ngày 12/6/2020.</h6>
+                <p>26/06/2020</p>
+              </li>
+              <li>
+                <img src="{% static 'tin-tuc11.jpg' %}" />
+                <a href="https://oto.com.vn/xe-moi/ford-f-150-2020-chao-gia-1-3-ty-dong-voi-nhieu-tuy-chon-hap-dan-articleid-vgeqj7n"><h5>Ford F-150 2020 chào giá 1,3 tỷ đồng với nhiều tùy chọn hấp dẫn</h5></a>
+                 <h6>Phân khúc xe bán tải cỡ lớn tại Philippines vừa đón chào sự ra mắt của Ford F-150 2020 với giá khởi điểm từ 2.698.000 PhP (gần 1,3 tỷ đồng).</h6>
+                <p>26/06/2020</p>
+              </li>
+            </ul>
+         </div>
+        <div class="right"> 
+          <h4 class="title8"> CÓ THỂ BẠN QUAN TÂM</h4>
+        </div>
+      </div>
+  </div>
+   <!---------footer----------->
+  <div id="footer">
+    <h3 class="title3">Liện hệ với chúng tôi</h3>
+      <div class="container10">
+          <div class="segment-one">
+            <a class="logo1" href="{% url 'home' %}"><img class="logo"src="{%static 'CAR2.png' %}"></a>
+            <h6>Luôn là sự lựa chọn của bạn.</h6>
+          </div>
+          <div class="segment-two">
+            <h5>HOTLINE</h5>
+            <h6><i class="fas fa-phone-alt"></i>Hộ trợ 24/24: 059113</h6>
+            <h6><i class="far fa-envelope"></i>Email: HT.yourcar@gamil.com</h6>
+            <h6><i class="fas fa-globe-americas"></i>Website: HT.yourcar@gmail.com</h6>
+          </div>
+          <div class="segment-three">
+            <h5>FOLLOW US</h5>
+            <h6>Hãy theo dõi chúng tôi qua:</h6>
+            <a href="#"><i class="fab fa-facebook-square"></i></a>
+            <a href="#"><i class="fab fa-twitter-square"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-instagram-square"></i></a>
+          </div>
+      </div>
+                <hr>
+          <h6 class="title5"> HT &copy;</h6>
+  </div>
+
+</body>
+</html>
